@@ -1,36 +1,8 @@
-# Opt-Out form made with Tailwind CSS
-I wanted to create a form that could be used for opt-out out of communications. This form comes with some built-in functionality, that allows different form inputs.
-- A "combo" input that allows for entering a email or phone number
-- A "email" input that allows for entering a email address
-- A "phone" input that allows for entering a phone number
-- Additionally, the form can show a backup contact email a user can use, should they encounter some issue with the form request or otherwise feel their opt-out has not been processed
-- Mobile and Desktop responsive
-- Button disables after form submit in the onclick function
-- Easily modifiable should you want to pass a handler function in for the button click
-- Uses react-imask for phone number input formatting
-
-## OptOutForm - Component Parameters
-```bash
-email: string //An email address where users could send a direct email, in-case there are issues with the form API call
-removeComboInput?: boolean //If "true", remove the combo input. "false" is default
-removeEmailInput?: boolean //If "true", remove the email input. "true" is default
-removePhoneInput?: boolean //If "true", remove the phone input. "true" is default
-```
-
-#### Use
-```bash
-<OptOutForm
-    email="privacy@oursite.com"
-    removeComboInput={false}
-    removeEmailInput={true}
-    removePhoneInput={true}
-/>
-```
+# Road to GTA VI fan site
+A fun fan site
 
 ## Dependencies
 - react ^19
-- react-hook-form ^7.54.2
-- react-imask ^7.6.1
 - tailwindcss ^3 //I think this would work fine with v4 maybe with some modification
 
 ## To Run Locally
@@ -54,3 +26,6 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Or
+View the demo here:

@@ -1,0 +1,37 @@
+{
+  "name": "gta-vi-site",
+  "displayName": "GTA VI Site",
+  "description": "A fan marketing site for GTA VI",
+  "version": "0.0.1",
+  "packageManager": "yarn@1.22.22",
+  "publisher": "marksoceanofcode",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marksoceanofcode/tw-opt-out-form.git"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^16.0.10",
+    "react": "^19",
+    "react-dom": "^19",
+    "react-hook-form": "^7.54.2",
+    "react-imask": "^7.6.1",
+    "tailwind-merge": "^3.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^16.0.8",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
