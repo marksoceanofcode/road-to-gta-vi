@@ -14,8 +14,8 @@ const SplashSection = ({ id }: SplashSectionProps) => {
           />
           <div className="text-center">
             <h2 className="font-bold my-2 text-4xl">Release Date</h2>
-            <h4 className="font-semibold text-xl">November 19th, 2026</h4>
-            <h6 className="decoration-2 decoration-red-500 line-through text-base">
+            <h4 className="animate-slideUp font-semibold text-xl">November 19th, 2026</h4>
+            <h6 className="animate-slideUp decoration-2 decoration-red-500 line-through text-base">
               May 26, 2026
               <br />
               Fall 2025

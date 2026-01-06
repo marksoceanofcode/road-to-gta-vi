@@ -1,5 +1,5 @@
-# Road to GTA VI fan site
-A fun fan site
+# Road to GTA VI Fan Site
+Fan site for GTA VI including a countdown and roadmap to launch date of the game.
 
 ## Dependencies
 - react ^19

@@ -48,7 +48,7 @@ body {
 }
 
 .gta-text-clip{
-  color: var(--_1nfc5st8);
+  color: transparent;
   width: 100%;
   text-transform: uppercase;
   text-align: center;
