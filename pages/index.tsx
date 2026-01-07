@@ -1,7 +1,7 @@
 import { Inter } from "next/font/google"
 import SplashSection from "@/components/SplashSection"
 import CountDownSection from "@/components/CountDownSection"
-import RoadmapSection from "@/components/RoadmapSection"
+import TimelineSection from "@/components/TimelineSection"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -14,8 +14,8 @@ export default function Home() {
       <CountDownSection
         id="count-down-section"
       />
-      <RoadmapSection
-        id="roadmap-section"
+      <TimelineSection
+        id="timeline-section"
       />
 
     </main>
