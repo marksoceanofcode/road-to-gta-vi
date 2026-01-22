@@ -47,6 +47,16 @@ body {
   opacity: 0.9455;
 }
 
+.gta-border-gradient-rounded{
+  border: 4px solid transparent;
+  border-radius: 16px;
+  background: 
+    linear-gradient(to right, #111118, #111118), 
+    linear-gradient(to right, #ffd687 0%, #d21a95 50%, #601969 100%); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
 .gta-text-clip{
   color: transparent;
   width: 100%;
