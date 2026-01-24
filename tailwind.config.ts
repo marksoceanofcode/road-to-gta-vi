@@ -27,6 +27,9 @@ const config: Config = {
         'sunset-purple': '#601969',
 
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"], // className="font-inter"
+      },
       keyframes: {
         slideUp: {
           '0%': { 
@@ -42,6 +45,8 @@ const config: Config = {
       spacing: {
         '150': '37.5rem',
         '156': '39rem',
+        '340': '85rem',
+        '360': '90rem'
       }
     },
   },

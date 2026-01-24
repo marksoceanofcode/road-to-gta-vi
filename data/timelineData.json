@@ -1,22 +1,68 @@
 {
     "data": [
         {
-            "body": "",
-            "date": "",
-            "sources": [],
-            "title": ""
+            "body": "Rockstar Games announces GTA VI will be delayed to November 17th, 2026 marking the second push back to the games launch date.",
+            "date": "2025-11-06",
+            "media": "",
+            "sources": ["https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026"],
+            "title": "Delayed (2nd Time)",
+            "type": "text"
         },
         {
             "body": "",
-            "date": "",
-            "sources": [],
-            "title": ""
+            "date": "2025-05-06",
+            "media": "https://cdn.sanity.io/files/verbey6h/production/80a519ba1324548c8875cf419aec2e69ce8c8e3b.mp4",
+            "sources": ["https://www.youtube.com/watch?v=VQRLujxTm3c"],
+            "title": "Trailer 2",
+            "type": "video"
+        },
+        {
+            "body": "Rockstar Games announces the first delay to GTA VI. The game will now be released on May 26th, 2026.",
+            "date": "2025-05-02",
+            "media": "",
+            "sources": ["https://www.rockstargames.com/newswire/article/258aa538o412ok/grand-theft-auto-vi-is-now-coming-may-26-2026"],
+            "title": "Delayed (1st Time)",
+            "type": "text"
+        },
+        {
+            "body": "Take-Two Interactive earnings report states that GTA VI will release Fall of 2025.",
+            "date": "2025-05-16",
+            "media": "",
+            "sources": ["https://ir.take2games.com/static-files/c189ec33-cb0d-44a0-8d20-2d3352836999"],
+            "title": "Release Date Update",
+            "type": "text"
+        },
+        {
+            "body": "Trailer 1 gives us a release date of calendar year 2025.",
+            "date": "2023-12-03",
+            "media": "",
+            "sources": ["https://www.youtube.com/watch?v=QdBZY2fkU-0"],
+            "title": "Initial Release Set for 2025",
+            "type": "text"
         },
         {
             "body": "",
-            "date": "",
-            "sources": [],
-            "title": ""
+            "date": "2023-12-03",
+            "media": "https://cdn.sanity.io/files/verbey6h/production/b29e4694d9719742e062a38a7efaaa797a651498.mp4",
+            "sources": ["https://www.youtube.com/watch?v=QdBZY2fkU-0"],
+            "title": "Trailer 1",
+            "type": "video"
+        },
+        {
+            "body": "Rockstar Games announces moving more development resources to the next GTA title development.",
+            "date": "2022-07-07",
+            "media": "",
+            "sources": ["https://www.rockstargames.com/newswire/article/9k74k52737912k/grand-theft-auto-and-red-dead-online-community-update"],
+            "title": "More Resources Move to GTA",
+            "type": "text"
+        },
+        {
+            "body": "Rockstar Games announces the next title in the GTA franchise is in development.",
+            "date": "2022-02-04",
+            "media": "",
+            "sources": ["https://www.rockstargames.com/newswire/article/ak73k92o47ko75/grand-theft-auto-community-update"],
+            "title": "Active Development",
+            "type": "text"
         }
     ]
 }

@@ -5,6 +5,7 @@
 :root {
   --background: #111118;
   --foreground: #ffffff;
+  --font-inter: "Inter", sans-serif;
 }
 
 @theme inline {
@@ -45,6 +46,16 @@ body {
 .gta-background-gradient{
   background-image: radial-gradient(circle at 50% 28.6351vh, rgb(255, 213, 131) 0vh, rgb(243, 74, 93) 49.9814vh, rgb(136, 39, 104) 89.9665vh, rgba(32, 31, 66, 0) 133.66vh);
   opacity: 0.9455;
+}
+
+.gta-border-gradient-rounded{
+  border: 4px solid transparent;
+  border-radius: 16px;
+  background: 
+    linear-gradient(to right, #111118, #111118), 
+    linear-gradient(to right, #ffd687 0%, #d21a95 50%, #601969 100%); 
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
 }
 
 .gta-text-clip{

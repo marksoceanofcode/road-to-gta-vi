@@ -2,7 +2,7 @@
   "name": "gta-vi-site",
   "displayName": "GTA VI Site",
   "description": "A fan marketing site for GTA VI",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "packageManager": "yarn@1.22.22",
   "publisher": "marksoceanofcode",
   "license": "SEE LICENSE IN LICENSE.md",
@@ -17,6 +17,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "moment": "^2.30.1",
     "next": "^16.0.10",
     "react": "^19",
     "react-dom": "^19",
