@@ -17,7 +17,7 @@ const SplashSection = ({ id }: SplashSectionProps) => {
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source
-          src="./videos/gta_main_characters_4k_v2.mp4"
+          src="https://cdn.sanity.io/files/verbey6h/production/23416712fe3705edcb103b8c56052c0bcff58aac.mp4"
           type="video/mp4"
         />
         Your browser does not support the video tag.
