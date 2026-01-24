@@ -15,7 +15,7 @@ const TimelineSection = ({ id }: TimelineSectionProps) => {
   const data = timelineData.data
 
   return (
-    <div id={id} className="min-h-screen relative">
+    <div id={id} className="min-h-screen max-w-340 mx-auto relative">
       <div className="flex items-center justify-center h-full py-8">
         <div className={"rounded-full w-4 h-full " + gradient}>
           <div className="invisible space-y-8 lg:space-y-16">
