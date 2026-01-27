@@ -40,7 +40,7 @@ const TimelineCard = ({
         <p className="mb-2 font-semibold text-sm text-gray-500">{fmtDate}</p>
         <p className="mb-0.5 text-base">{body}</p>
         <p className="italic text-xs text-gray-500">Source:{" "}
-            <a href={sources[0]} className="underline" target="_blank">{sources[0]}</a>
+            <a href={sources[0]} className="break-all underline" target="_blank">{sources[0]}</a>
         </p>
       </div>
     </div>
