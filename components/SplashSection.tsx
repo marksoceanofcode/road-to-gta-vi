@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react'
+import { twMerge } from 'tailwind-merge'
 import {
   PlusCircleIcon,
 } from "@heroicons/react/24/solid"
@@ -7,6 +9,12 @@ type SplashSectionProps = {
 }
 
 const SplashSection = ({ id }: SplashSectionProps) => {
+  const [showBgLoader, setShowBgLoader] = useState(true)
+
+  useEffect(() => {
+    setShowBgLoader(false)
+  }, []) //Empty dependency array so it runs only once
+  
   return (
     <div id={id} className="h-screen">
       <video
@@ -22,6 +30,12 @@ const SplashSection = ({ id }: SplashSectionProps) => {
         />
         Your browser does not support the video tag.
       </video>
+      {/* Background loader while video loads */}
+      { showBgLoader === true ?
+        <div className="animate-pulse bg-gray-300 w-full h-full">
+        </div>
+        : <></>
+      }
       <div className="flex flex-col items-center justify-center h-screen relative z-10">
         <div className="flex flex-col">
           <img
@@ -50,6 +64,7 @@ const SplashSection = ({ id }: SplashSectionProps) => {
           </div>
         </a>
       </div>
+      
     </div>
   )
 }
