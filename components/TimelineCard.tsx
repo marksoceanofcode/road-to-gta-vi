@@ -23,7 +23,7 @@ const TimelineCard = ({
   containerClasses,
 }: TimelineCardProps) => {
   const allClasses = twMerge(
-    "bg-midnight-blue/50 backdrop-blur-md border-4 border-white border-solid p-4 rounded-2xl w-full md:w-150",
+    "bg-midnight-blue/50 backdrop-blur-md border-4 border-white border-solid p-4 rounded-2xl text-wrap w-full md:w-150",
     classes
   )
   const allContainerClasses = twMerge("", containerClasses)

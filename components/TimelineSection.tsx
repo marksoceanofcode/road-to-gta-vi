@@ -1,9 +1,15 @@
+import { useEffect, useRef, useState } from 'react'
 import TimelineCard from "@/components/TimelineCard"
 import timelineData from "@/data/timelineData.json"
 import TimelineVideoCard from "./TimelineVideoCard"
 
 type TimelineSectionProps = {
   id: string
+}
+
+interface TimelineDimensions {
+  height: number
+  width: number
 }
 
 const TimelineSection = ({ id }: TimelineSectionProps) => {
@@ -14,43 +20,41 @@ const TimelineSection = ({ id }: TimelineSectionProps) => {
 
   const data = timelineData.data
 
+  const [dimensions, setDimensions] = useState<TimelineDimensions>({height: 1880, width: 1328})
+
+  const divRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const element = divRef.current
+    if(!element) return
+    
+    const resizeObserver = new ResizeObserver((entries) => { //Gets called by the observer each time the element is resized
+      for(const entry of entries){
+        const {height, width} = entry.contentRect
+        setDimensions({height, width})
+      }
+    })
+
+    resizeObserver.observe(element) //Begin observing the element
+
+    return () => {
+      resizeObserver.disconnect()
+    }
+
+  }, []) //Watch for the element with the reference
+
   return (
     <div id={id} className="min-h-screen max-w-340 mx-auto relative">
       <div className="flex items-center justify-center h-full py-8">
         <div className={"rounded-full w-4 h-full " + gradient}>
-          <div className="invisible space-y-8 lg:space-y-16">
-            {/* These will be ghost cards to add height to the div with the gradient timeline bar.
-            Using a min width to prevent squishing of <div> and overflow clip so <div> ghost containers do not overflow the view. */}
-            {data.map((item, index) =>
-              item.type === "video" ? (
-                <TimelineVideoCard
-                  id={"timeline-card-invisible-" + index}
-                  date={item.date}
-                  key={"tci-" + index}
-                  media={item.media}
-                  sources={item.sources}
-                  title={item.title}
-                  classes="min-w-96"
-                  containerClasses="overflow-clip"
-                />
-              ) : (
-                <TimelineCard
-                  id={"timeline-card-invisible-" + index}
-                  body={item.body}
-                  date={item.date}
-                  key={"tci-" + index}
-                  sources={item.sources}
-                  title={item.title}
-                  classes="min-w-96"
-                  containerClasses="overflow-clip"
-                />
-              )
-            )}
+          {/* Setting a dynamic height depending on the height of the container of the timeline cards. Much more stable now! */}
+          <div style={{height: `${dimensions.height}px`}}> 
+
           </div>
         </div>
       </div>
-      <div className="absolute px-8 top-8 w-full">
-        <div className="space-y-8 lg:space-y-16">
+      <div className="absolute px-4 top-8 w-full lg:px8">
+        <div className="space-y-8 lg:space-y-16" ref={divRef}>
           {data.map((item, index) =>
             item.type === "video" ? (
               <TimelineVideoCard
