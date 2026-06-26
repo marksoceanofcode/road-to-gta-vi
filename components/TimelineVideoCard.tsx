@@ -1,12 +1,10 @@
 import { twMerge } from "tailwind-merge"
-import {
-  PlayCircleIcon,
-} from "@heroicons/react/24/solid"
+import { PlayCircleIcon } from "@heroicons/react/24/solid"
 
 type TimelineVideoCardProps = {
   id: string
   date: string
-  key: string
+  //key: string
   media: string
   sources: string[]
   title: string
@@ -17,7 +15,7 @@ type TimelineVideoCardProps = {
 const TimelineVideoCard = ({
   id,
   date,
-  key,
+  //key,
   media,
   sources,
   title,
@@ -34,7 +32,7 @@ const TimelineVideoCard = ({
   return (
     <div
       id={id}
-      key={key}
+      //key={key}
       className={allContainerClasses !== "" ? allContainerClasses : undefined}
     >
       <a href={sources[0]} className="w-full md:w-150" target="_blank">

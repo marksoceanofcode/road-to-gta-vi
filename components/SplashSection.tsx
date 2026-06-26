@@ -1,8 +1,6 @@
-import { useEffect, useState } from 'react'
-import { twMerge } from 'tailwind-merge'
-import {
-  PlusCircleIcon,
-} from "@heroicons/react/24/solid"
+import { useEffect, useState } from "react"
+import { twMerge } from "tailwind-merge"
+import { PlusCircleIcon } from "@heroicons/react/24/solid"
 
 type SplashSectionProps = {
   id: string
@@ -14,7 +12,7 @@ const SplashSection = ({ id }: SplashSectionProps) => {
   useEffect(() => {
     setShowBgLoader(false)
   }, []) //Empty dependency array so it runs only once
-  
+
   return (
     <div id={id} className="h-screen">
       <video
@@ -31,11 +29,11 @@ const SplashSection = ({ id }: SplashSectionProps) => {
         Your browser does not support the video tag.
       </video>
       {/* Background loader while video loads */}
-      { showBgLoader === true ?
-        <div className="animate-pulse bg-gray-300 w-full h-full">
-        </div>
-        : <></>
-      }
+      {showBgLoader === true ? (
+        <div className="animate-pulse bg-gray-300 w-full h-full"></div>
+      ) : (
+        <></>
+      )}
       <div className="flex flex-col items-center justify-center h-screen relative z-10">
         <div className="flex flex-col">
           <img
@@ -45,9 +43,7 @@ const SplashSection = ({ id }: SplashSectionProps) => {
           />
           <div className="text-center">
             <h2 className="font-bold my-2 text-4xl">Release Date</h2>
-            <h4 className="font-semibold mb-6 text-xl">
-              November 19, 2026
-            </h4>
+            <h4 className="font-semibold mb-6 text-xl">November 19, 2026</h4>
             {/* <h6 className="animate-slideUp decoration-2 decoration-red-500 line-through text-base">
               May 26, 2026
               <br />
@@ -57,14 +53,16 @@ const SplashSection = ({ id }: SplashSectionProps) => {
             </h6> */}
           </div>
         </div>
-        <a href="#cta-wishlist-section" className="animate-slideUp absolute bottom-4">
+        <a
+          href="#cta-wishlist-section"
+          className="animate-slideUp absolute bottom-4"
+        >
           <div className="bg-midnight-blue/50 backdrop-blur-md border-4 border-white border-solid font-bold py-2 px-6 text-2xl rounded-full hover:border-light-yellow hover:text-light-yellow">
             {/* <PlusCircleIcon className="inline size-6" /> add to wishlist */}
-            Wishlist GTA VI
+            Pre-Order
           </div>
         </a>
       </div>
-      
     </div>
   )
 }
