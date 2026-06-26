@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from "react"
 import TimelineCard from "@/components/TimelineCard"
 import timelineData from "@/data/timelineData.json"
 import TimelineVideoCard from "./TimelineVideoCard"
@@ -20,18 +20,22 @@ const TimelineSection = ({ id }: TimelineSectionProps) => {
 
   const data = timelineData.data
 
-  const [dimensions, setDimensions] = useState<TimelineDimensions>({height: 1880, width: 1328})
+  const [dimensions, setDimensions] = useState<TimelineDimensions>({
+    height: 1880,
+    width: 1328,
+  })
 
   const divRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const element = divRef.current
-    if(!element) return
-    
-    const resizeObserver = new ResizeObserver((entries) => { //Gets called by the observer each time the element is resized
-      for(const entry of entries){
-        const {height, width} = entry.contentRect
-        setDimensions({height, width})
+    if (!element) return
+
+    const resizeObserver = new ResizeObserver((entries) => {
+      //Gets called by the observer each time the element is resized
+      for (const entry of entries) {
+        const { height, width } = entry.contentRect
+        setDimensions({ height, width })
       }
     })
 
@@ -40,7 +44,6 @@ const TimelineSection = ({ id }: TimelineSectionProps) => {
     return () => {
       resizeObserver.disconnect()
     }
-
   }, []) //Watch for the element with the reference
 
   return (
@@ -48,9 +51,7 @@ const TimelineSection = ({ id }: TimelineSectionProps) => {
       <div className="flex items-center justify-center h-full py-8">
         <div className={"rounded-full w-4 h-full " + gradient}>
           {/* Setting a dynamic height depending on the height of the container of the timeline cards. Much more stable now! */}
-          <div style={{height: `${dimensions.height}px`}}> 
-
-          </div>
+          <div style={{ height: `${dimensions.height}px` }}></div>
         </div>
       </div>
       <div className="absolute px-4 top-8 w-full lg:px8">

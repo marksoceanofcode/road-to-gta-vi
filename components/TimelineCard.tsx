@@ -5,7 +5,7 @@ type TimelineCardProps = {
   id: string
   body: string
   date: string
-  key: string
+  //key: string
   sources: string[]
   title: string
   classes?: string
@@ -16,7 +16,7 @@ const TimelineCard = ({
   id,
   body,
   date,
-  key,
+  //key,
   sources,
   title,
   classes,
@@ -30,7 +30,11 @@ const TimelineCard = ({
   const fmtDate = moment(date).format("LL")
 
   return (
-    <div id={id} key={key} className={allContainerClasses !== "" ? allContainerClasses : undefined}>
+    <div
+      id={id}
+      //key={key}
+      className={allContainerClasses !== "" ? allContainerClasses : undefined}
+    >
       <div className={allClasses}>
         {/* <div className="mb-2">
             <p className="inline font-bold text-2xl text-bright-yellow">{title}</p>
@@ -39,8 +43,11 @@ const TimelineCard = ({
         <p className="font-bold mb-0.5 text-2xl text-bright-yellow">{title}</p>
         <p className="mb-2 font-semibold text-sm text-gray-500">{fmtDate}</p>
         <p className="mb-0.5 text-base">{body}</p>
-        <p className="italic text-xs text-gray-500">Source:{" "}
-            <a href={sources[0]} className="break-all underline" target="_blank">{sources[0]}</a>
+        <p className="italic text-xs text-gray-500">
+          Source:{" "}
+          <a href={sources[0]} className="break-all underline" target="_blank">
+            {sources[0]}
+          </a>
         </p>
       </div>
     </div>
